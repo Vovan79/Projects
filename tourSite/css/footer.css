@@ -1,0 +1,60 @@
+#footer_content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgba(19, 120, 147, 57);
+	background-color: #f1efe6;
+	width: 100%;
+	height: 147px;
+}
+#footer_content a {text-decoration: none;}
+#footer_logo_name {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 25%;
+}
+#footer_logo_name span {
+	font-family: "LifeCraft";
+	color: rgb(19, 120, 147);
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+	padding-left: 20px;
+}
+#footer_logo_name span:hover {color: rgb(230, 0, 152);}
+#footer_content i {
+	color: rgb(19, 120, 147);
+	font-size: 41px;
+}
+#footer_content i:hover {color: rgb(230, 0, 152);}
+#footer_nets {width: 25%;}
+#footer_nets span {
+	font-family: "M.Video";
+	color: #137893;
+	font-size: 24px;
+	font-weight: 400;
+	text-align: center;
+	padding-left: 30%;
+}
+#nets_icons {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#disign {
+	width: 25%;
+}
+#design span {
+	display: block;
+	font-family: "M.Video";
+	color: #137893;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+}

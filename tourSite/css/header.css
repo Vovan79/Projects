@@ -1,0 +1,95 @@
+@font-face {
+	font-family: "M.Video";
+	src: url(../fonts/9366.ttf);
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "LifeCraft";
+	src: url(../fonts/lifecraft.ttf);
+}
+
+* {
+	padding: 0;
+	margin: 0; 
+	box-sizing: border-box;
+}
+.header {
+	position: fixed;
+	width: 100%;
+	height: 161px;
+	z-index: 1;
+	background-color: #ffffff;
+}
+.header a {text-decoration: none;}
+.header span:hover {color: rgb(230, 0, 152);}
+.logo {
+	height: 120px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#logo_name {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 400px;
+}
+#logo_name span {
+	font-family: "LifeCraft";
+	color: rgb(19, 120, 147);
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+	margin-left: 10px;
+}
+#logo_name span:hover {color: rgb(230, 0, 152);}
+.logo i {
+	color: rgb(19, 120, 147);
+	font-size: 41px;
+	float: left;
+}
+.logo i:hover {color: rgb(230, 0, 152);}
+#logo_adr, #logo_tel {
+	margin-right: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#logo_adr div, #logo_tel div {
+	display: inline-block;
+	border: 2px black;
+	padding: 0;
+	margin-right: 4px;
+}
+#logo_adr span, #logo_tel span {
+	display: block;
+	font-family: "M.Video";
+	color: rgb(19, 120, 147);
+	font-size: 16px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 41px;
+	background-color: #4682B4;
+}
+.navigation a {
+	margin: 0 27px;
+}
+.navigation a span {
+	font-family: "M.Video";
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: left;
+}
+

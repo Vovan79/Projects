@@ -1,0 +1,346 @@
+main {
+	width: 100%;
+	height: 2828px;
+	background-image: url(../img/main.jpg);
+	background-size: cover;	
+	padding: 40px 140px;
+}
+#mainContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.mainHead {
+	display: block;
+	font-family: "M.Video";
+	color: #e56abb;
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
+	padding-bottom: 40px;
+}
+.day {
+	border-radius: 50%;
+	background-color: #137893;
+	width: 87px;
+	height: 87px;
+	padding: 10px;
+	margin: 20px 0;
+}
+.day span {
+	display: block;
+	font-family: "M.Video";
+	color: #f1efe6;
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;	
+}
+main .reserveBtn {margin-top: 20px;}
+
+.dayContent {
+	margin: 20px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.dayContent article {
+	width: 525px;
+	height: 260px;
+	border-right: solid 3px #137893;
+	padding-right: 80px;
+}
+.dayContent p {
+	font-family: "M.Video";
+	color: #000000;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 20px;
+	text-align: justify;
+	padding: 5px 0;
+}
+.divImage {
+	width: 445px;
+	height: 255px;
+	border-radius: 5px;
+	margin-left: 80px;
+}
+#div1Image {
+	background-image: url(../img/day1a.jpg);
+	background-size: cover;
+}
+#div2Image {
+	background-image: url(../img/day2a.jpg);
+	background-size: cover;
+}
+#div3Image {
+	background-image: url(../img/day3a.jpg);
+	background-size: cover;
+}
+#div4Image {
+	background-image: url(../img/day4a.jpg);
+	background-size: cover;
+}
+#div5Image {
+	background-image: url(../img/day5a.jpg);
+	background-size: cover;
+}
+#div6Image {
+	background-image: url(../img/day6a.jpg);
+	background-size: cover;
+}
+
+#withUs {
+	width: 100%;
+	height: 378px;
+	background-image: url(../img/withus.jpg);
+	background-size: cover;
+	padding: 40px 0;
+}
+#withUsPersons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.persons {
+	width: 380px;
+	height: 200px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 20px;
+	align-items: center;
+	margin: 0 50px;
+}
+.persons span {
+	display: block;
+	margin-bottom: 30px;
+	width: 100px; 
+	font-family: "M.Video";
+	color: #000000;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: justify;
+}
+.persons i {
+	color: #fff;
+	font-size: 27px;
+	text-align: center;
+	background-color: #84b5c2;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	padding-top: 5px;
+}
+.persons i:hover {color: rgb(230, 0, 152);}
+.personsHead {font-size: 23px;}
+#guide {
+	width: 158px;
+	height: 158px;
+	border-radius: 50%;
+	background-image: url(../img/guide.jpg);
+	background-size: cover;
+}
+#photo {
+	width: 158px;
+	height: 158px;
+	border-radius: 50%;
+	background-image: url(../img/photo.jpg);
+	background-size: cover;
+}
+#recall {
+	width: 100%;
+	height: 590px;
+	background-color: #fff;
+	padding: 40px 0; 
+}
+#reservingSection {
+	background-color: #137893;
+	width: 100%;
+	height: 628px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0;
+}
+#reservingSection section {
+	width: 40%;
+	height: 550px;
+	margin: 0 50px; 
+}
+#reservingPhoto {
+	border-radius: 50%;
+	width: 255px;
+	height: 255px;
+	background-image: url(../img/formPhoto.jpg);
+	background-size: cover;	
+	padding: 20px 0;
+}
+#reservingIt {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#reservingIt span {
+	display: block;
+	padding-top: 20px;
+	font-family: "M.Video";
+	color: #ffffff;
+	font-size: 33.33px; 
+	font-weight: 400;
+	text-align: center;
+}
+.reservingForm h1 {
+	font-family: "M.Video";
+	color: #ffffff;
+	font-size: 33.33px; 
+	font-weight: 700;
+	line-height: 42.915px;
+	text-align: left;
+	padding-left: 6%;
+	margin-bottom: 20px;
+}
+.reservingForm h2 {
+	font-family: "M.Video";
+	color: #ffffff;
+	font-size: 25px; 
+	font-weight: 700;
+	line-height: 42.915px; 
+	text-align: left;
+	padding-left: 18%;
+	margin-bottom: 20px;
+}
+.calendarMini {padding-left: 10px;}
+.calendarMini span {
+	font-family: "M.Video";
+	color: #ffffff;
+	font-size: 13px;
+	font-weight: 400;
+	text-align: center;
+}
+.calendarMini i {
+	color: #ffffff;
+	width: 16px;
+	height: 15px;
+}
+.calendarMini img {
+	width: 35px;
+	height: 18px;
+}
+.calendarMini form {margin-top: 20px;}
+.calendarMini input {
+	border-radius: 10px;
+	background-color: #f1efe6;
+	width: 445px;
+	height: 56px;
+	margin-top: 30px;
+	padding-left: 10px;
+}
+.reservingFormBtn {
+	background-color: #e56abb;
+	width: 445px;
+	height: 75px;
+	font-family: "M.Video";
+	color: #ffffff;
+	font-size: 23px;
+	font-weight: 700;
+	text-align: center;
+	border-radius: 12px;
+	border: solid 1px #ce4da2;
+	margin-top: 40px;
+}
+.reservingFormBtn:hover {
+	background-color: #ce4da2;
+	color: #4B0082;
+	font-size: 28px;
+}
+
+#popup {
+	width: 100%;
+	min-height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	display: none;
+	z-index: 1;
+}
+#popup_content {
+	position: relative;
+	width: 800px;
+	height: 600px;
+	left: calc(50% - 400px);
+	top:  200px;
+	text-align: center;
+	font-size: 16px;
+	border-radius: 10px;
+	background-color: #137893;
+	cursor: pointer;
+}
+#popup_content h1 {
+	text-align: center;
+	padding: 20px 0 0 0;
+}
+#popup_content h2 {
+	text-align: center;
+	padding: 10px 0 0 0;
+}
+.popup_reserving {cursor: pointer;}
+
+#contacts {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 450px;
+	width: 100%;
+	background-color: #f1efe6;
+}
+#Kharkov {
+	width: 50%;
+	height: 450px;
+	background-image: url(../img/Kharkov.jpg);
+	background-size: cover;
+	cursor: pointer;
+}
+#ourContact {
+	padding: 40px 0;
+	width: 50%;
+	height: 450px;	
+}
+#contacts_adr, #contacts_tel {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#contacts_adr {padding-left: 30px;}
+#contacts_adr div, #contacts_tel div {
+	display: inline-block;
+	margin: 20px 10px;
+}
+#contacts_adr span, #contacts_tel span {
+	display: block;
+	font-family: "M.Video";
+	color: #137893;
+	font-size: 24px;
+	font-weight: 400;
+	text-align: left;
+}
+#ourContact i {
+	color: rgb(19, 120, 147);
+	font-size: 60px;
+	padding: 17px 0 0 28px;
+}
+#ourContact i:hover {color: rgb(230, 0, 152);}
+.contacts_icon {
+	border-radius: 50%;
+	border-width: 3px;
+	border-color: #137893;
+	border-style: solid;
+	width: 94px;
+	height: 94px;
+}
