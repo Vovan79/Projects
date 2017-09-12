@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
 	
+	//code for the slider of the header section
+
 	var sliderArr = ["url(img/slide1a.jpg)", "url(img/slide2a.jpg)", "url(img/slide3a.jpg)", "url(img/slide4a.jpg)"];
 	var sliderNum = 0;
 	$(".slider").css("background-image", sliderArr[sliderNum]);
@@ -14,6 +16,8 @@ $(document).ready(function(){
 	}
 	
 //******************************************************************************************************************
+
+	//code for the canvas images to show the clients activities
 
 	(function($){
   			$.fn.showPercent = function(percent){
@@ -39,12 +43,16 @@ $(document).ready(function(){
 
 //******************************************************************************************************************		
 
+	//code for the opening the map of Kharkov
+
 	$("#Kharkov").click(function(){
 		//document.location.href = "https://yandex.ua/maps/147/kharkiv/?lang=ru&ncrnd=31&ll=36.236709%2C50.009399&z=16";
 		open($(".contacts_icon a").attr("href"));
 	})
 
 //******************************************************************************************************************
+
+	//code for the slider of the clients comments
 
 	$("#arrow_left").mouseover(function() {
 		$(this).attr("src", "img/arrow_left_hover.jpg")
@@ -58,7 +66,6 @@ $(document).ready(function(){
 	$("#arrow_right").mouseout(function() {
 		$(this).attr("src", "img/arrow_right.jpg")
 	})
-
 
 	//var sliderArr = ["img/person4.jpg", "img/person1.jpg", "img/person2.jpg", "img/person3.jpg"];
 	var step = 450;
@@ -106,11 +113,13 @@ $(document).ready(function(){
 
 //******************************************************************************************************************
 
+	//code for the opening/closing the reserving form
+
 	$(".popup_reserving").click(function() {
 		showPopup();
 	})
 
-	$("#popup_content").click(function(){
+	$("#close_icon").click(function(){
 		hidePopup();
 	})
 
@@ -122,6 +131,8 @@ $(document).ready(function(){
 	}
 
 //******************************************************************************************************************
+
+	//code for the enlarging of the guide/foto pictures
 
 	$("#guide").mouseover(function() {
 		$(this).css({width: 200, height: 200});
@@ -135,6 +146,10 @@ $(document).ready(function(){
 	$("#photo").mouseout(function() {
 		$(this).css({width: 158, height: 158});
 	})
+
+	//******************************************************************************************************************
+
+	//code for the checking of the reserving form entry
 })
 
 

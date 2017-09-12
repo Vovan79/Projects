@@ -256,6 +256,7 @@ main .reserveBtn {margin-top: 20px;}
 	background-color: #ce4da2;
 	color: #4B0082;
 	font-size: 28px;
+	cursor: pointer;
 }
 
 #popup {
@@ -278,7 +279,6 @@ main .reserveBtn {margin-top: 20px;}
 	font-size: 16px;
 	border-radius: 10px;
 	background-color: #137893;
-	cursor: pointer;
 }
 #popup_content h1 {
 	text-align: center;
@@ -288,7 +288,12 @@ main .reserveBtn {margin-top: 20px;}
 	text-align: center;
 	padding: 10px 0 0 0;
 }
-.popup_reserving {cursor: pointer;}
+#close_icon {
+	position:  absolute;
+	right: 10px;
+	top:  10px;
+	cursor: pointer;
+}
 
 #contacts {
 	display: flex;
