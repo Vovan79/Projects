@@ -12,7 +12,8 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.js"
 		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="	  crossorigin="anonymous"></script>
 	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script async src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script async src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 	<script async src="script/index.js"></script>
 </head>
 
@@ -270,10 +271,10 @@
 				<img src="img/mount.png" alt="">
 				<span>ГОРНОЛЫЖНЫЙ КУРОРТ S&OumlLDEN</span>
 				<form action="" method="post" name="resForm">
-					<input type="text" placeholder="ФИО">
-					<input type="text" placeholder="E-mail">
-					<input type="text" placeholder="Телефон">
-					<button class="reservingFormBtn" type="submit">ЗАБРОНИРОВАТЬ</button>
+					<input type="text" placeholder="ФИО"><span></span>
+					<input type="text" placeholder="E-mail"><span></span>
+					<input type="text" placeholder="Телефон +38(xxx)xxx-xx-xx"><span></span>
+					<button type="button" id="resSecBtn" class="reservingFormBtn">ЗАБРОНИРОВАТЬ</button>
 				</form>
 			</div>
 		</section>
@@ -289,10 +290,10 @@
 				<img src="img/mount.png" alt="">
 				<span>ГОРНОЛЫЖНЫЙ КУРОРТ S&OumlLDEN</span>
 				<form action="" method="post" name="resForm">
-					<input type="text" placeholder="ФИО">
-					<input type="text" placeholder="E-mail">
-					<input type="text" placeholder="Телефон">
-					<button class="reservingFormBtn" type="submit">ЗАБРОНИРОВАТЬ</button>
+					<input type="text" placeholder="ФИО" autofocus>
+					<input type="email" placeholder="E-mail">
+					<input type="tel" placeholder="Телефон +38(xxx)xxx-xx-xx">
+					<button type="button" id="popupBtn" class="reservingFormBtn">ЗАБРОНИРОВАТЬ</button>
 				</form>
 			</div>
 			<img id="close_icon" src="img\close_icon.png" alt="">

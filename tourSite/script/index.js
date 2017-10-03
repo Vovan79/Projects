@@ -132,6 +132,72 @@ $(document).ready(function(){
 
 //******************************************************************************************************************
 
+	//validation of the reserving form
+	
+	var resSecName = $("#reservingSection").find("input").eq(0);
+	var resSecEmail = $("#reservingSection").find(":input").eq(1);
+	var resSecTel = $("#reservingSection").find(":input").eq(2);
+
+	resSecName.focus(function() {$(this).val("").css({color: "black", fontSize: "14px"})});
+	resSecEmail.focus(function() {$(this).val("").css({color: "black", fontSize: "14px"})});
+	resSecTel.focus(function() {$(this).val("").css({color: "black", fontSize: "14px"})});
+
+	var popupName = $("#popup").find("input").eq(0);
+	var popupEmail = $("#popup").find(":input").eq(1);
+	var popupTel = $("#popup").find(":input").eq(2);
+
+	popupName.focus(function() {$(this).val("").css({color: "black", fontSize: "14px"})});
+	popupEmail.focus(function() {$(this).val("").css({color: "black", fontSize: "14px"})});
+	popupTel.focus(function() {$(this).val("").css({color: "black", fontSize: "14px"})});
+
+	$("#resSecBtn").click(function() {
+		if(validate(resSecName, resSecEmail, resSecTel)) {
+			var name = resSecName.val();
+			var email = resSecEmail.val();
+			var tel = resSecTel.val();
+			alert("The form is validated! " + " name: " + name + " email: " + email + " tel: " + tel);
+			clearForm(resSecName, resSecEmail, resSecTel);
+		}
+	});
+
+	$("#popupBtn").click(function() {
+		if(validate(popupName, popupEmail, popupTel)) {
+			var name = popupName.val();
+			var email = popupEmail.val();
+			var tel = popupTel.val();
+			alert("The form is validated! " + " name: " + name + " email: " + email + " tel: " + tel);
+			clearForm(popupName, popupEmail, popupTel);
+		}
+	});
+
+	function validate(name, email, tel) {
+		var regExp_name = /^[a-zA-z ]+$/;
+		var regExp_email = /^([a-zA-z0-9_.-])+@([a-zA-z0-9_.-])+\.([a-zA-z]){2,4}$/;
+		var regExp_tel = /^(\+38\(\d{3}\)\d{3}\-\d{2}\-\d{2})$/;
+
+		if(name.val() == "" || name.val() == "*Enter your name" || !regExp_name.test(name.val())) {
+			name.val("*Enter your name").css({color: "red", fontSize: "20px"});
+			return;
+		}
+		if(email.val() == "" || email.val() == "*Enter your e-mail" || !regExp_email.test(email.val())) {
+			email.val("*Enter your e-mail").css({color: "red", fontSize: "20px"});
+			return;
+		}	
+		if(tel.val() == "" || tel.val() == "*Enter your telephone" || !regExp_tel.test(tel.val())) {
+			tel.val("*Enter your telephone").css({color: "red", fontSize: "20px"});
+			return;
+		}
+		return true;
+	}
+
+	function clearForm(name, email, tel) {
+		name.val("");
+		email.val("");
+		tel.val("");
+	}
+
+//******************************************************************************************************************
+
 	//code for the enlarging of the guide/foto pictures
 
 	$("#guide").mouseover(function() {
