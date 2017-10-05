@@ -44,7 +44,7 @@ main .reserveBtn {margin-top: 20px;}
 	flex-direction: row;
 	justify-content: space-around;
 }
-.dayContent article {
+.dayContent div:first-child {
 	width: 525px;
 	height: 260px;
 	border-right: solid 3px #137893;
@@ -193,7 +193,7 @@ main .reserveBtn {margin-top: 20px;}
 	font-weight: 400;
 	text-align: center;
 }
-.reservingForm h1 {
+.reservingForm h2 {
 	font-family: "M.Video";
 	color: #ffffff;
 	font-size: 33.33px; 
@@ -203,7 +203,7 @@ main .reserveBtn {margin-top: 20px;}
 	padding-left: 6%;
 	margin-bottom: 20px;
 }
-.reservingForm h2 {
+.reservingForm h3 {
 	font-family: "M.Video";
 	color: #ffffff;
 	font-size: 25px; 
@@ -285,6 +285,10 @@ main .reserveBtn {margin-top: 20px;}
 	padding: 20px 0 0 0;
 }
 #popup_content h2 {
+	text-align: center;
+	padding: 10px 0 0 0;
+}
+#popup_content h3 {
 	text-align: center;
 	padding: 10px 0 0 0;
 }
