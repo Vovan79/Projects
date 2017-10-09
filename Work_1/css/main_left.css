@@ -1,0 +1,83 @@
+/*css-styles for classes "header" and "slider" are in file Lesson4.css*/
+
+main {
+	margin: 20px auto;
+	max-width: 1170px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+/*css-styles for class "block_left" are in file Lesson3_4_mod.css*/
+.block_left {
+	margin: 0 15px;
+	max-width: 780px;
+}
+
+.block_right {
+	border: solid 1px #DADADA;
+	border-radius: 4px;
+	margin: 0 15px;
+	width: 390px;
+	background-color: #fff;
+	padding: 30px;
+}
+
+.block_right article {
+	margin-bottom: 50px;
+}
+		
+.widget_2 p {
+	margin: 0 0 10px 0;
+	padding-bottom: 10px;
+	font-size: 14px;
+	color: #C1C0C0;
+	border-bottom: solid 1px #F2F2F2; 
+}
+
+.block_right h1 {
+	font-size: 14px;
+	font-weight: bold; 
+	color: #636467;
+	margin: 0;
+	padding-bottom: 25px;
+}
+
+.widget_1 span {
+	display: inline-block;
+	margin: 0 5px 5px 0;
+	border-radius: 3px;
+	background-color: #C1C0C0;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.span_twitter:hover {background-color: #55ACEE;}
+.span_facebook:hover {background-color: #4265B9;}
+.span_youtube:hover {background-color: #DF3333;}
+.span_google:hover {background-color: #D62408;}
+.span_vk:hover {background-color: #5B8BB4;}
+
+.block_right span i {
+	margin-top: 11px;
+	color: #fff;
+}
+
+.widget_2 i {font-weight: bold;}
+
+.widget_3 span {
+	display: inline-block;
+	margin-bottom: 4px;
+	padding: 6px 7px;
+	border-radius: 3px;
+	background-color: #DADADA;
+	color: #fff;
+	font-size: 12px;
+}
+
+.widget_3 span:hover {background-color: #DA4453;}
+
+.block_right .widget_3 {margin-bottom: 0;}
