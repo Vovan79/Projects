@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<title>Air battle</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.js"
+			integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="	  crossorigin="anonymous"></script>
+		<script src="script/index.js"></script>
+	</head>
+
+	<body>
+		<div id="field"></div>
+		<div id="info">
+			<span>Time:</span><span class="data-blue" id="time">&nbsp;</span><br>
+			<span>Rockets:</span><span class="data-blue" id="rocketsNumber">&nbsp;</span><br>
+			<span>Fired:</span><span class="data-red" id="enemyFired">&nbsp;</span><br>
+			<span>Lost:</span><span class="data-red" id="enemyLost">&nbsp;</span>
+			<span>Score:</span><span id="score">&nbsp;</span>
+			<div id="alarm">You have no rockets!!!</div>
+			<div id="controls">
+				<img src="img/left2.png" alt="left arrow">
+				<img src="img/right2.png" alt="right arrow"> Left / Right <br>
+				<img src="img/space.png" alt="space arrow"> Fire
+
+			</div>
+ 		</div>
+
+ 		<script>
+ 			$("#field, #info").css({height: (document.documentElement.clientHeight / 100 * 85)});
+ 		</script>
+		
+		<div id="buttons">
+			<button id="start">Start</button>
+			<button id="reload">Reload</button>
+		</div>
+	</body>
+</html>
