@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<title>Map Stations</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		
+		<link rel="stylesheet" type="text/css" href="css/portable.css" media="all and (max-width: 800px)">
+		<link rel="stylesheet" type="text/css" href="css/index.css" media="all and (min-width: 801px)">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>	-->
+	<!--	<script src="https://code.jquery.com/jquery-3.2.1.js"
+			integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="	  crossorigin="anonymous"></script>	-->
+	</head>
+
+	<body>
+		<div id="authdiv">
+			<span>Login:</span><input type="text" id="login"><br>
+			<span>Password:</span><input type="password" id="password"><br>
+			<button id="submit">OK</button>						
+		</div>
+		<script src="script/authorize.js"></script>
+
+		<div id="mapdiv"></div>
+		<div id="infodiv">
+			<div id="addObject">
+				<fieldset>
+					<legend>Add object panel</legend>
+					<label>Choose type:</label>
+					<select id="addSelection">
+						<option></option>
+						<option value="cores">Cores</option>
+						<option value="boxes">Boxes</option>
+						<option value="lines">Lines</option>
+						<option value="olts">Olts</option>
+					</select>
+					<div id="add">
+						<p class="field cores boxes lines"><span>Name:</span> <input type="text" id="add_name"></p>
+						<p class="field boxes lines olts"><span>NAS:</span> <input type="text" id="add_nas"></p>
+						<p class="field olts"><span>Model:</span> <input type="text" id="add_model"></p>
+						<p class="field cores"><span>Router:</span> <input type="text" id="add_router"></p>
+						<p class="field boxes"><span>TrSpl:</span> <input type="text" id="add_trspl"></p>
+						<p class="field boxes"><span>SbSpl:</span> <input type="text" id="add_sbspl"></p>
+						<p class="field lines"><span>Startbox:</span> <input type="text" id="add_startbox"></p>
+						<p class="field lines"><span>Endbox:</span> <input type="text" id="add_endbox"></p>
+						<p class="field lines"><span>Fibernum:</span> <input type="text" id="add_fibernum"></p>
+						<p class="field lines"><span>Length:</span> <input type="text" id="add_length"></p>
+						<p class="field cores boxes"><span>Address:</span> <input type="text" id="add_addr"></p>
+						<button id="newObject" class="field cores boxes">new Object</button>
+						<button id="addBtn">Add</button>
+					</div>
+				</fieldset>
+			</div>
+			<div id="deleteObject">
+				<fieldset>
+					<legend>Delete object panel</legend>
+					<label>Choose type:</label>
+					<select id="deleteSelection">
+						<option></option>
+						<option value="boxes">Boxes</option>
+						<option value="lines">Lines</option>
+						<option value="olts">Olts</option>
+					</select>
+					<div id="delete">
+						<p class="field boxes lines"><span>Name:</span> <input type="text" id="delete_name"></p>
+						<p class="field boxes lines olts"><span>NAS:</span> <input type="text" id="delete_nas"></p>
+						<p class="field olts"><span>Model:</span> <input type="text" id="delete_model"></p>
+						<button id="deleteBtn">Delete</button>	
+					</div>
+				</fieldset>
+			</div>
+			<div id="editObject">
+				<fieldset>
+					<legend>Edit object panel</legend>
+					<label>Choose type:</label>
+					<select id="editSelection">
+						<option></option>
+						<option value="boxes">Boxes</option>
+						<option value="lines">Lines</option>
+					</select>
+					<div id="edit">
+						<p class="field boxes lines"><span>Name:</span> <input type="text" id="edit_name"></p>
+						<p class="field boxes lines"><span>NAS:</span> <input type="text" id="edit_nas"></p>
+						<p class="field boxes"><span>TrSpl:</span> <input type="text" id="edit_trspl"></p>
+						<p class="field boxes"><span>SbSpl:</span> <input type="text" id="edit_sbspl"></p>
+						<p class="field lines"><span>Startbox:</span> <input type="text" id="edit_startbox"></p>
+						<p class="field lines"><span>Endbox:</span> <input type="text" id="edit_endbox"></p>
+						<p class="field lines"><span>Fibernum:</span> <input type="text" id="edit_fibernum"></p>
+						<p class="field lines"><span>Length:</span> <input type="text" id="edit_length"></p>
+						<p class="field boxes"><span>Address:</span> <input type="text" id="edit_addr"></p>
+						<button id="editBtn">Edit</button>
+						<button id="saveBtn">Save</button>	
+					</div>
+				</fieldset>
+			</div>
+		</div>
+
+		<script>
+			var mapZoom;
+			
+			detectBrowser();
+			
+			function detectBrowser() {
+				var useragent = navigator.userAgent;
+				var authdiv = document.getElementById("authdiv");
+			
+				if(useragent.indexOf("iPhone") != -1 || useragent.indexOf("Android") != -1) {
+					authdiv.style.top = "10%";
+					mapZoom = 8;
+				}
+				else 
+					mapZoom = 9;
+			}	
+		</script>
+	</body>
+</html>

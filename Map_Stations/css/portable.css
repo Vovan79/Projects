@@ -1,0 +1,119 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 2.2vw;
+	box-sizing: border-box;
+	position: relative;
+	background-color: lightgoldenrodyellow;
+}
+
+#authdiv {
+	position: absolute;
+	width: 30em;
+	height: 20em;
+	border: 2px solid green;
+	background-color: indianred;
+}
+
+#authdiv span {
+	display: inline-block;
+	width: 40%;
+	font-size: 2.2em;
+	margin-left: 5%;
+}
+
+#authdiv input {
+	height: 15%;
+	width: 40%;
+	margin-top: 7%;
+	font-size: 2.2em;
+}
+
+#authdiv button {
+	margin-left: 25%;
+	margin-top: 7%;
+	width: 50%;
+	height: 20%;
+	font-size: 2em;
+	font-weight: normal;
+	background-color: mediumseagreen;
+}
+
+#mapdiv {
+	display: none;
+	width: 80%;
+	float: left;
+	margin-right: 1%;
+	height: 100%;
+	border: 2px solid black;
+	box-sizing: border-box;
+}
+
+#infodiv {
+	display: none;
+	float: right;
+	height: 100%;
+	border: 2px solid black;
+	box-sizing: border-box;
+	background-color: lightgoldenrodyellow;
+}
+
+#infodiv span {
+	display: inline-block;
+	width: 70px;
+	font-weight: bold;
+}
+
+#addObject, #deleteObject {margin-bottom: 30px;}
+
+fieldset {min-height: 50px;}
+
+fieldset legend {
+	font-size: 20px;
+	font-weight: bold;
+	color: blue;
+}
+
+label {
+	font-size: 18px;
+	font-weight: bold;
+	color: red;
+}
+select {width: 120px;}
+option {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.field {display: none;}
+
+button {font-weight: bold;}
+
+#newObject {
+	margin-right: 20px;
+	width: 30%;
+	background-color: yellow;
+}
+#addBtn {
+	width: 30%;
+	background-color: green;
+	display: none;
+}
+#deleteBtn {
+	width: 30%;
+	background-color: red;
+	display: none;
+}
+#editBtn {
+	margin-right: 20px;
+	width: 30%;
+	background-color: yellow;
+	display: none;
+}
+#saveBtn {
+	width: 30%;
+	background-color: green;
+	display: none;
+}
