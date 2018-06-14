@@ -1,0 +1,57 @@
+.math {
+	display:none;
+	text-align: center;
+}
+
+#message {
+	display: block;
+	margin: 0 30%;
+	height: 68px;
+	width: auto;
+	text-align: center;
+	font-size: 52px;
+	margin-bottom: 80px;
+}
+
+.math span {
+	font-size: 48px;
+	display: inline-block;
+	width: 240px;
+}
+
+.math input {
+	height: 50px;
+	width: 100px;
+	font-size: 48px;
+}
+
+.math button {
+	width: 300px;
+	text-align: auto;
+	margin: 60px 0; 
+	border-radius: 15px;
+	background-color: yellow;
+	height: 64px;
+	font-size: 48px;
+	margin-bottom: 160px;
+}
+
+.math div {
+	text-align: left;
+	margin: 0 0 10px 20px; 
+}
+
+#taskStr {width: auto;}
+#answerStr {margin-left: 10px;}
+
+.theEnd {
+	position: fixed;
+	width: 100%;
+	top: 80%;
+	display: none;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.theEnd button {margin-top: 40px;}

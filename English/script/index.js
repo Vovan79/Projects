@@ -1,21 +1,22 @@
+//========================THE PREPARATION PART===================================================================================================================
+
 var useragent = navigator.userAgent;
-var numberOfWords = dictionary.length;		//the number of words in the dictionary
 var tasksNumber = 5;						//the number of tasks on the page;
 var numberOfMistakes = 0;					//the number of mistakes
-				
+					
 var numOfBackground = 1;
 var buttonStart;
 
-var widthWindow = document.documentElement.clientWidth;			//the width of the window
-var heightWindow = document.documentElement.clientHeight; 		//the height of the window
+var widthWindow = $(window).width();		//the width of the window
+var heightWindow = $(window).height(); 		//the height of the window
 
-//===============================================================================================================================================================
-		
+//========================SIZE AND BACKGROUND OF THE WINDOW======================================================================================================
+				
 if(useragent.indexOf("iPhone") != -1 || useragent.indexOf("Android") != -1) {
 	$("#main").css({backgroundColor:"white", paddingTop:"10%", width:widthWindow, height:heightWindow});	
 }
 else { 
-//Defininf of the size of the window
+	//Defining the size of the window
 	if(widthWindow < 900)
 		widthWindow = 900;
 	if(heightWindow < 600) 
@@ -29,8 +30,8 @@ else {
 		$("body").css({backgroundSize: widthWindow + "px auto"});
 	else
 		$("body").css({backgroundSize: "auto " + heightWindow + "px"});
-		
-//Changing the background of the page every 10 seconds
+				
+	//Changing the background image of the page every 10 seconds
 	setInterval(function() {
 		if(numOfBackground == 19)
 			numOfBackground = 0;
@@ -39,7 +40,7 @@ else {
 	}, 10000);		
 }
 
-//===============================================================================================================================================================
+//========================START OF THE APPLICATION===============================================================================================================
 
 //Creating the start button on the page
 createButtonStart();
@@ -50,7 +51,13 @@ function createButtonStart() {
 
 	if(useragent.indexOf("iPhone") != -1 || useragent.indexOf("Android") != -1) {
 		$(buttonStart).css({position:"absolute", left:"30%", top:"39%", width:"40%", height:"10%", backgroundColor:"blue", 
-							borderRadius:"0.5em", textAlign:"center", lineHeight:"1.5em", fontSize:"2em", color:"white"});		
+							borderRadius:"0.5em", textAlign:"center", lineHeight:"1.5em", fontSize:"2em", color:"white"});
+
+		//Defining touch events for mobile devices versus mouse events for desktop
+		document.addEventListener("touchstart", touchHandler, true);		
+		document.addEventListener("touchmove", touchHandler, true);
+		document.addEventListener("touchend", touchHandler, true);
+		document.addEventListener("touchcancel", touchHandler, true);		
 	}
 	else {
 		$(buttonStart).css({position:"absolute", left:(widthWindow/2 - 150), top:(heightWindow/2 - 50), width:"300px", height:"100px",
@@ -59,24 +66,31 @@ function createButtonStart() {
 	$(buttonStart).text("Start!!!");
 }
 
-$(buttonStart).on("mousedown", function() {
+$(buttonStart).mouseover(function() {
+	$(this).css({cursor:"pointer"});
+});
+$(buttonStart).mousedown(function() {
 	$(this).hide();
 	startLesson();
 });
 
-//===============================================================================================================================================================
+//========================START LEARNING ENGLISH=================================================================================================================
 
 //Start the learning process
 function startLesson() {
-	var numberOfTasks = tasksNumber;									//a number of the lesson's task
-	var widthWindow = $(window).width();								//the width of the window
-	var heightWindow = $(window).height();								//the height of the window
+	var dictionary = EngRus;
+	var numberOfWords = dictionary.length;	//the number of words in the dictionary
+	var numberOfTasks = tasksNumber;		//a number of the lesson's task
+	var widthWindow = $(window).width();	//the width of the window
+	var heightWindow = $(window).height();	//the height of the window
 
-	document.addEventListener("touchstart", touchHandler, true);
-	document.addEventListener("touchmove", touchHandler, true);
-	document.addEventListener("touchend", touchHandler, true);
-	document.addEventListener("touchcancel", touchHandler, true);
-			
+	var keyOfWord;							//the key of the word from the dictionary
+	var randomNum;							//a random number from 0 to (numberOfTasks-1) (0 - 4)
+	var arrayOfKeys = [];					//an array of the unique keyOfWord 
+	var arrayOfNums = [];					//an array of the unique numbers from 0 to (numberOfTasks-1) (0 - 4)
+	var counterOfKeys = 0;					//a counter of the keyOfWord in the arrayOfKeys
+	var counterOfNums = 0;					//a counter of the unique numbers in the arrayOfNums
+
 	//Creating the blocks for russian and english words
 	for(var i = 0; i < numberOfTasks; i++) {
 		var blockRus = document.createElement("div");
@@ -86,7 +100,7 @@ function startLesson() {
 		$(blockRus).append(pRus);
 		$(pRus).attr("id", ("pRus"+i));
 		$(pRus).text("");
-			
+					
 		var blockEng = document.createElement("div");
 		$("#english").append(blockEng);
 		$(blockEng).attr("id", ("blockEng"+i));
@@ -110,13 +124,6 @@ function startLesson() {
 		}
 	}
 
-	var keyOfWord;					//the key of the word from the dictionary
-	var randomNum;					//a random number from 0 to (numberOfTasks-1) (0 - 4)
-	var arrayOfKeys = [];			//an array of the unique keyOfWord 
-	var arrayOfNums = [];			//an array of the unique numbers from 0 to (numberOfTasks-1) (0 - 4)
-	var counterOfKeys = 0;			//a counter of the keyOfWord in the arrayOfKeys
-	var counterOfNums = 0;			//a counter of the unique numbers in the arrayOfNums
-
 	while(counterOfNums < numberOfTasks)
 	{
 		randomNum = Math.floor(Math.random() * numberOfTasks);		//creating a random number from 0 to (numberOfTasks - 1)
@@ -136,22 +143,24 @@ function startLesson() {
 	}	
 
 	//Filling the words from the dictionary by the keyOfWord to the blocks
-	for(var i = 0; i < numberOfTasks; i++) {
-		$("#blockRus" + i).attr("keyNumber", arrayOfKeys[i]);
-		$("#pRus"+i).text(dictionary[arrayOfKeys[i]].rus);
-		$("#blockEng" + arrayOfNums[i]).attr("keyNumber", arrayOfKeys[i]);
-		$("#pEng"+arrayOfNums[i]).text(dictionary[arrayOfKeys[i]].eng);
+	for(var j = 0; j < numberOfTasks; j++) {
+		var pair = dictionary[arrayOfKeys[j]];						//a pair of english-russian words in the dictionary
+		$("#blockEng" + arrayOfNums[j]).attr("keyNumber", arrayOfKeys[j]);
+		$("#pEng"+arrayOfNums[j]).text(pair[0]);
+		$("#blockRus" + j).attr("keyNumber", arrayOfKeys[j]);
+		$("#pRus"+j).text(pair[1]);
 
 		if(useragent.indexOf("iPhone") != -1 || useragent.indexOf("Android") != -1) {
 			var fontSize = 15;
-			var finalFontSize = fontSizeDetermine($("#pRus"+i), $("#blockRus"+i).css("width"), fontSize);
-			$("#pRus"+i).css({fontSize:(finalFontSize + "px"), paddingTop:((fontSize - finalFontSize + 2)/2 + "px")});
-			$("#pEng"+arrayOfNums[i]).css({fontSize: (fontSizeDetermine($("#pEng"+i), $("#blockEng"+i).css("width"), fontSize) + "px")});										
+			var finalFontSizeRus = fontSizeDetermine($("#pRus"+j), $("#blockRus"+j).css("width"), fontSize);
+			var finalFontSizeEng = fontSizeDetermine($("#pEng"+arrayOfNums[j]), $("#blockEng"+arrayOfNums[j]).css("width"), fontSize);
+			$("#pRus"+j).css({fontSize:(finalFontSizeRus + "px"), paddingTop:((fontSize - finalFontSizeRus + 2)/2 + "px")});
+			$("#pEng"+arrayOfNums[j]).css({fontSize:(finalFontSizeEng + "px"), paddingTop:((fontSize - finalFontSizeEng + 2)/2 + "px")});										
 		}
 		else {
 			var fontSize = 30;
-			$("#pRus"+i).css({fontSize: (fontSizeDetermine($("#pRus"+i), $("#blockRus"+i).css("width"), fontSize) + "px")});
-			$("#pEng"+arrayOfNums[i]).css({fontSize: (fontSizeDetermine($("#pEng"+i), $("#blockEng"+i).css("width"), fontSize) + "px")});					
+			$("#pRus"+j).css({fontSize: (fontSizeDetermine($("#pRus"+j), $("#blockRus"+j).css("width"), fontSize) + "px")});
+			$("#pEng"+arrayOfNums[j]).css({fontSize: (fontSizeDetermine($("#pEng"+arrayOfNums[j]), $("#blockEng"+arrayOfNums[j]).css("width"), fontSize) + "px")});					
 		}
 	}	
 
@@ -173,6 +182,7 @@ function startLesson() {
 											$(".info").css({visibility:"hidden"}).text("");
 											$(buttonStart).show();
 										}
+										return;
 									}
 									else {
 										numberOfMistakes++;
@@ -185,7 +195,7 @@ function startLesson() {
 									$(".info").text("").css({visibility:"hidden"});
 								}										
 	});
-			
+					
 	//The style of the english blocks by dragging
 	$("#english div").draggable({containment:"body", cursor:"move", revert:true,
 								start: function() {
@@ -212,8 +222,8 @@ function startLesson() {
 
 	//Valitating the presence of the value in the valuesArray
 	function valueOff(value, arrayOfValues) {
-		for(var i = 0; i < arrayOfValues.length; i++) {
-			if(arrayOfValues[i] == value)
+		for(var k = 0; k < arrayOfValues.length; k++) {
+			if(arrayOfValues[k] == value)
 				return false;
 		}
 		return true;
@@ -253,7 +263,8 @@ $(window).resize(function() {
 });		
 
 //=======================================================================================================================================================
-		
+
+//The function-handler of the touch events for mobile devices		
 function touchHandler(event) {
 	var touches = event.changedTouches;
 	var first = touches[0];

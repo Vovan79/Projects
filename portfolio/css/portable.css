@@ -1,0 +1,190 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background-color: darkblue;
+	font-size: 2.2vw;
+	height: 100%;
+}
+
+.english {display: none;}
+
+/*header styles*/
+
+header {
+	width: 100%;
+	margin-top: 1%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+#pageLang {
+	width: 3em;
+	height: 3em;
+	font-size: 1.2em;
+	line-height: 2.5em;
+	border-radius: 1.5em;
+	text-align: center;
+	margin-right: 5%;
+	transition: all 0.5s linear;
+	box-sizing: border-box;
+	border: solid 0.2em white;
+}
+
+header nav {width: 80%;}
+
+header nav div {
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+header nav span {
+	transition: all 0.8s linear;
+	display: inline-block;
+	font-size: 1.2em;
+}
+
+header nav span:hover {
+	color: red;
+	cursor: pointer;
+}
+
+/*main blocks styles*/
+
+main article p {
+	margin: 2% 1%;
+	text-indent: 8%;
+}
+
+main article p a:visited {color: #8FFF85;}
+main article p a:hover {color: maroon;}
+main article p a:link {color: #8FFF85;}
+
+#foto {display: none;}
+
+#info {
+	padding: 2%;
+	width: 100%;
+	color: white;
+	text-align: justify;
+	font-size: 1.2em;
+	transition: all 2s linear;
+}
+
+#about, #portfolio, #contact {display: none;}
+
+#about .courses {padding-left: 5%;}
+
+#about .work_years {font-weight: bold;}
+#about .work_position {color: lightgreen;}
+#about .work_funcs {
+	text-decoration: underline;
+	font-style: italic;
+}
+
+#about .point {text-decoration: underline;}
+
+#about .courses a:visited {color: white;}
+#about .courses a:hover {color: maroon;}
+#about .courses a:link {color: white;}
+
+#portfolio > div {
+	font-size: 2em;
+	text-align: center;
+	padding-top: 5%;	
+}
+
+#portfolio div.slides {
+	margin: 5% 5%;
+	padding: 2% 0; 
+	width: 90%;
+}
+
+#portfolio div.slides img {
+	transition: all 1s linear;
+	cursor: pointer;
+}
+
+#portfolio span:hover {
+	transition: all 0.8s linear;
+	cursor: pointer;
+	color: red;
+}
+
+#portfolio img {
+	width: 30%;
+	z-index: 5;
+}
+
+#contact {
+	width: 90%;
+	height: 50%;
+	margin: 10% 5%;
+	border-radius: 3%;
+	padding: 5%;
+	box-shadow: 1em -1em 1em 0 rgba(0,0,0,0.6);
+	background-color: #FEF5CD;
+	background-size: contain;
+	box-sizing: border-box;
+}
+
+#contact table {
+	width: 100%;
+	color: #000;
+}
+
+#contact table caption {
+	text-align: center;
+	font-size: 1.6em;
+	line-height: 150%;
+}
+
+#contact table tr {height: 2em;}
+
+#contact table tr td:first-child {
+	width: 20%;
+	text-align: center;
+}
+
+#contact table tr td a {text-decoration: none;}
+#contact table tr td i {font-size: 1.6em; color: blue;}
+#contact table tr td a:visited {color: blue;}
+#contact table tr td a i:visited {color: blue;}
+#contact table tr td a:link {color: blue;}
+#contact table tr td a i:link {color: blue;}
+#contact table tr td a:hover {color: maroon;}
+#contact table tr td a i:hover {color: maroon;}
+
+#toTop {
+	position: fixed;
+	bottom: 12%;
+	right: 5%;
+	width: 8%;
+	height: 8%;
+	display: none;
+	opacity: 1;
+	z-index: 9999;
+}
+
+#toTop img {width: 100%;}
+
+/*footer styles*/
+
+footer {
+	width: 100%;
+	height: 4em;
+	background-color: #003343;
+	text-align: center;
+	font-size: 1em;
+	color: white;
+	line-height: 4em;
+}
+

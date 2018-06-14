@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<title>Welcome to Math World</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/welcome.css">
+		<link rel="stylesheet" type="text/css" href="css/math.css">
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.js"
+			integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="	  crossorigin="anonymous"></script>
+		<script src="script/welcome.js"></script>
+		<script src="script/entry.js"></script>
+	</head>
+
+	<body>
+		<div class="welcome">
+			<h1>Welcome to MathOperations!</h1>
+			<span>What is your name?</span>
+			<input type="text">
+			<button>Click me!</button>
+			<p class="error"></p>
+		</div>
+		
+		<div class="userEntry">
+			<h1></h1>
+			<span>Choose math operations:</span>
+			<select id="operations">
+				<option></option>
+				<option>Sum</option>
+				<option>Multiply</option>
+			</select><span class="error"></span><br>
+		
+			<span>Choose number of operators:</span>
+			<select id="operators">
+				<option></option>
+				<option>2 operators</option>
+				<option>3 operators</option>
+			</select><span class="error"></span><br>
+		
+			<span>Choose your level:</span>
+			<select id="level">
+				<option></option>
+				<option>Level_1</option>
+				<option>Level_2</option>
+				<option>Level_3</option>
+			</select><span class="error"></span><br>
+			
+			<span>Choose number of tasks:</span>
+			<select id="numberOfTasks">
+				<option></option>
+				<option>1</option>
+				<option>10</option>
+				<option>16</option>
+				<option>20</option>
+			</select><span class="error"></span><br>
+
+			<div>
+				<button id="nextBtn">Math Ops</button>
+				<button id="multiTabBtn">MultiTab</button>
+			</div>
+		</div>
+		
+		<div class="math">
+			<span id="message"></span>
+			<br>
+			<span id="taskStr"></span>
+			<input type="text" id="answerStr">
+			<br>
+			<button id="calculate">Calculate</button>
+			<div>
+				<span>Task #:</span>
+				<input type="text" id="taskNumStr" readonly="readonly">
+			</div>
+			<div>
+				<span>Mistakes:</span>
+				<input type="text" id="mistakesStr" readonly="readonly">
+			</div>
+		</div>
+
+		<div class="theEnd">
+			<button id="restart">Restart</button>
+		</div>
+	</body>
+</html>

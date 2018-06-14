@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#canvas {float: left;}
+
+#control {
+	position: fixed;
+	display: none;
+	top: 30px;
+}
+
+table {
+	width: 400px;
+	height: 300px;
+	border: 1px solid;
+	font-size: 1.2em;
+}
+
+tr {
+	height: 50px;
+	text-align: center;
+}
+td {border: 1px solid grey;}
+
+input[type="text"] {
+	width: 40px;
+	height: 30px;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+button {
+	margin-top: 20px;
+	margin-left: 150px; 
+	width: 100px;
+	height: 40px;
+	font-size: 1.2em;
+}

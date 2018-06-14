@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<title>Snowflake drawing</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		
+		<link rel="stylesheet" type="text/css" href="css/portable.css" media="all and (max-width: 800px)">
+		<link rel="stylesheet" type="text/css" href="css/index.css" media="all and (min-width: 801px)">		
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="script/index.js" defer></script>
+	</head>
+
+	<body>
+		<canvas id="canvas" width="900" height="900"></canvas>
+		<div id="control">
+			<table>
+				<tr>
+					<td>Color of the field:</td>
+					<td><input type="color" id="fieldColor"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Color of the radians:</td>
+					<td><input type="color" id="radianColor"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Color of the lines:</td>
+					<td><input type="color" id="lineColor"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Width of the lines:</td>
+					<td><input type="range" min="1" max="5" id="lineWidth"></td>
+					<td><input type="text" id="lineWidthValue"></td>
+				</tr>
+				<tr>
+					<td>Distance between points:</td>
+					<td><input type="range" min="20" max="100" id="distance"></td>
+					<td><input type="text" id="distanceValue"></td>
+				</tr>
+				<tr>
+					<td>Number of sectors:</td>
+					<td><input type="range" min="12" max="48" id="numOfSectors"></td>
+					<td><input type="text" id="numOfSectorsValue"></td>
+				</tr>
+			</table>
+			<button>Apply</button>			
+		</div>
+	</body>
+</html>

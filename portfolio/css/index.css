@@ -1,0 +1,213 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background-color: grey;
+	background: -webkit-linear-gradient(left, #E3E3E3, #292929);
+	background: -moz-linear-gradient(left, #bfbfbf, #292929);
+	background: -o-linear-gradient(left, #bfbfbf, #292929);
+}
+
+.english {display: none;}
+
+/*header styles*/
+
+header {
+	width: 100%;
+	height: 75px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	color: white;
+	font-size: 20px;
+}
+
+#pageLang {
+	width: 50px;
+	height: 50px;
+	line-height: 44px;
+	border-radius: 25px;
+	text-align: center;
+	margin-right: 60px;
+	transition: all 0.5s linear;
+	box-sizing: border-box;
+	border: solid 3px white;
+}
+
+header nav {
+	height: 30px;
+	width: 482px;
+}
+
+header nav div {
+	float: left;
+	width: 120px;
+	text-align: center;
+}
+
+header nav span {
+	transition: all 0.8s linear;
+	display: inline-block;
+}
+
+header nav span:hover {
+	color: red;
+	cursor: pointer;
+}
+
+/*main blocks styles*/
+
+main {position: relative;}
+
+main article p {
+	margin:  20px 10px;
+	text-indent: 50px;
+}
+
+main article p a:visited {color: #58FAF4;}
+main article p a:link {color: #8FFF85;}
+main article p a:hover {color: #FAAC58;}
+
+#foto {
+	display: inline-block;
+	position: fixed;
+	left: 0;
+	top: 75px;
+	width: 30%;
+	min-width: 230px;
+	height: 700px;
+	margin: 0 0 0 5%;
+	float: left;
+	background: url("../img/venzel.png") no-repeat;
+}
+
+#info {
+	padding: 50px 0 20px 0;
+	margin-left: 35%;
+	margin-right: 5%; 
+	width: 60%;
+	min-height: 650px;
+	color: white;
+	text-align: justify;
+	font-size: 20px;
+	transition: all 2s linear;
+}
+
+#about, #portfolio, #contact {display: none;}
+
+#about .courses {padding-left: 50px;}
+
+#about .work_years {font-weight: bold;}
+#about .work_position {color: blue;}
+#about .work_funcs {
+	text-decoration: underline;
+	font-style: italic;
+}
+
+#about .point {text-decoration: underline;}
+
+#about .courses a:visited {color: white;}
+#about .courses a:hover {color: maroon;}
+#about .courses a:link {color: white;}
+
+#portfolio > div {
+	font-size: 36px;
+	text-align: center;
+	min-height: 100px;
+	padding-top: 20px;	
+}
+
+#portfolio div.slides {
+	margin: 30px 10%;
+	padding: 10px 0; 
+	width: 80%;
+}
+
+#portfolio div.slides img {
+	transition: all 1s linear;
+	cursor: pointer;
+}
+
+#portfolio span:hover {
+	transition: all 0.8s linear;
+	cursor: pointer;
+	color: red;
+}
+
+#portfolio img {
+	width: 160px;
+	z-index: 5;
+}
+
+#contact {
+	width: 60%;
+	min-width: 400px;
+	height: 400px;
+	margin: 100px 15%;
+	border-radius: 5px;
+	padding: 30px 10px 0 0;
+	box-shadow: 20px -20px 20px 0 rgba(0,0,0,0.6);
+	background: url("../img/venzel.png") no-repeat #FEF5CD;
+	background-size: contain;
+}
+
+#contact table {
+	min-width: 270px;
+	color: #000;
+	margin-left: 20%;
+}
+
+#contact table caption {
+	font-size: 30px;
+	line-height: 50px;
+}
+
+#contact table tr {height: 40px;}
+
+#contact table tr td:first-child {
+	width: 80px;
+	text-align: center;
+}
+
+#contact table tr td a {text-decoration: none;}
+#contact table tr td i {font-size: 30px; color: blue;}
+#contact table tr td a:visited {color: blue;}
+#contact table tr td a i:visited {color: blue;}
+#contact table tr td a:link {color: blue;}
+#contact table tr td a i:link {color: blue;}
+#contact table tr td a:hover {color: maroon;}
+#contact table tr td a i:hover {color: maroon;}
+
+#toTop {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	width: 60px;
+	height: 60px;
+	display: none;
+	opacity: 0.7;
+	z-index: 10;
+}
+
+#toTop img {width: 100%;}
+
+/*footer styles*/
+
+footer {
+	width: 100%;
+	height: 75px;
+	background-color: #92A2B5;
+	background: -webkit-linear-gradient(left, #C3FCFF, #003343);
+	background: -moz-linear-gradient(left, #C3FCFF, #003343);
+	background: -o-linear-gradient(left, #C3FCFF, #003343);
+	text-align: center;
+	font-size: 14px;
+	color: white;
+	line-height: 75px;
+}
+
