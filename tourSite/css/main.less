@@ -1,0 +1,121 @@
+@main-font-family: "M.Video";
+@main-color: rgb(19, 120, 147);
+@main-hover-color: rgb(230, 0, 152);
+.flex() {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.flex-column() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main {
+	width: 100%;
+	min-width: 1000px;
+	height: 2828px;
+	background-image: url(../img/main.jpg);
+	background-size: cover;	
+	padding: 40px 140px;
+	#mainContent {
+		.flex-column();
+		justify-content: space-around;
+		.day {
+			border-radius: 50%;
+			background-color: @main-color;
+			width: 87px;
+			height: 87px;
+			padding: 10px;
+			margin: 20px 0;
+			span {
+				display: block;
+				font-family: @main-font-family;
+				color: #eee;
+				font-size: 24px;
+				text-align: center;	
+			}
+		}
+		.dayContent {
+			.flex();
+			justify-content: space-around;
+			margin: 20px 0;
+			div {
+				&:first-child {
+					width: 525px;
+					height: 260px;
+					border-right: solid 3px #137893;
+					padding-right: 80px;
+				}
+			}
+			p {
+				font-family: @main-font-family;
+				color: #000;
+				font-size: 16px;
+				line-height: 20px;
+				text-align: justify;
+				padding: 5px 0;
+			}
+			.divImage {
+				width: 445px;
+				height: 255px;
+				border-radius: 5px;
+				margin-left: 80px;
+				background-size: cover;
+			}
+			#div1Image {background-image: url(../img/day1a.jpg);}
+			#div2Image {background-image: url(../img/day2a.jpg);}
+			#div3Image {background-image: url(../img/day3a.jpg);}
+			#div4Image {background-image: url(../img/day4a.jpg);}
+			#div5Image {background-image: url(../img/day5a.jpg);}
+			#div6Image {background-image: url(../img/day6a.jpg);}	
+		}
+		.reserveBtn {
+			margin-top: 20px;
+		}
+	}
+}
+
+#popup {
+	width: 100%;
+	min-height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	display: none;
+	z-index: 1;
+	#popup_content {
+		position: relative;
+		width: 800px;
+		height: 600px;
+		margin: auto; 
+		top: 200px;
+		text-align: center;
+		font-size: 16px;
+		border-radius: 10px;
+		background-color: @main-color;
+		h2, h3 {
+			font-family: @main-font-family;
+			color: #fff;
+			line-height: 43px;
+			text-align: center;
+			padding: 10px 0 0 0;
+			margin-bottom: 20px;
+		}
+		h2 {
+			font-size: 33px; 
+		}
+		h3 {
+			font-size: 25px; 
+		}
+		#close_icon {
+			position:  absolute;
+			right: 10px;
+			top:  10px;
+			cursor: pointer;
+		}
+	}
+}

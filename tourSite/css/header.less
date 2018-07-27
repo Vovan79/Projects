@@ -1,0 +1,98 @@
+@font-face {
+	font-family: "M.Video";
+	src: url(../fonts/9366.ttf);
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "LifeCraft";
+	src: url(../fonts/lifecraft.ttf);
+}
+
+@header-height: 161px;
+@min-width: 1000px;
+@main-font-family: "M.Video";
+@main-color: rgb(19, 120, 147);
+@main-hover-color: rgb(230, 0, 152);
+.flex() {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	padding: 0;
+	margin: 0; 
+	box-sizing: border-box;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	min-width: @min-width;
+	height: @header-height;
+	z-index: 1;
+	background-color: #ffffff;
+	a {
+		text-decoration: none;
+	}
+	nav {
+		.flex();
+		height: 41px;
+		background-color: #4682B4;
+		a {
+			margin: 0 27px;
+			span {
+				font-family: @main-font-family;
+				color: #ffffff;
+				font-size: 18px;
+				&:hover {
+					color: @main-hover-color;
+				}
+			}
+		}
+	}
+	#logo_section {
+		height: 120px;
+		.flex();
+		i {
+			color: @main-color;
+			font-size: 41px;
+			float: left;
+			&:hover {
+				color: @main-hover-color;
+			}
+		}
+		#logo_name {
+			width: 160px;
+			.flex();
+			margin-right: 60%;
+			span {
+				font-family: "LifeCraft";
+				color: @main-color;
+				font-size: 30px;
+				margin-left: 20px;
+			}
+		}
+		.logo_adr_tel {
+			width: 200px;
+			.flex();
+			div {
+				display: inline-block;
+				margin-right: 8px;
+			}
+			span {
+				display: block;
+				font-family: @main-font-family;
+				color: @main-color;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+#pre {
+	position: relative;
+	height: @header-height;
+}
