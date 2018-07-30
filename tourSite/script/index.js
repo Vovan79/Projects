@@ -41,6 +41,29 @@ $(document).ready(function(){
 		$("#percent1").showPercent(73);
 		$("#percent2").showPercent(45);
 
+
+//******************************************************************************************************************		
+		
+		$("#startMenu").click(function() {
+			window.scrollTo(0, -161);						//161 - the height of the fixed header block
+		});
+		$("#aboutUsMenu").click(function() {
+			var targetDivTop = $("div.map").offset().top;
+			window.scrollTo(0, (+targetDivTop - 161));
+		});
+		$("#programMenu").click(function() {
+			var targetDivTop = $("main").offset().top;
+			window.scrollTo(0, (+targetDivTop - 161));
+		});		
+		$("#recallsMenu").click(function() {
+			var targetDivTop = $("#recall").offset().top;
+			window.scrollTo(0, (+targetDivTop - 161));
+		});
+		$("#contactsMenu").click(function() {
+			var targetDivTop = $("#contacts").offset().top;
+			window.scrollTo(0, (+targetDivTop - 161));
+		});
+
 //******************************************************************************************************************		
 
 	//code for the opening the map of Kharkov
